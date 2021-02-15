@@ -7,7 +7,7 @@ function MovieListItem({movie}) {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className="MovieItem">
             <h3>{movie.title}</h3>
             <img src={movie.poster} alt={movie.title} onClick={() => {
                 dispatch({ type: 'GET_DETAILS', payload: movie.id });

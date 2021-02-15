@@ -5,7 +5,7 @@ import { createPopper } from '@popperjs/core';
 
 
 function AddMovie() {
-
+    
     const [newTitle, setNewTitle] = useState('');
     const [newURL, setNewURL] = useState('');
     const [newDesc, setNewDesc] = useState('');
@@ -31,7 +31,7 @@ function AddMovie() {
                 description: newDesc,
                 title: newTitle,
                 poster: newURL,
-                name: newGenre,
+                genre_id: newGenre,
             }
         });
 
@@ -82,6 +82,7 @@ function AddMovie() {
                 </div>
                 <button type="submit">Add!</button>
             </form>
+            <button onClick={() => { history.push('/') }}>Back to List</button>
         </div>
     );
 }

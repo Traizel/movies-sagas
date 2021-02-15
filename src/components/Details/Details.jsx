@@ -8,7 +8,7 @@ function Details() {
     console.log(genres);
 
     return (
-        <div>
+        <div key={genres[0].id}>
             <h1>{genres[0].title}</h1>
             <img src={genres[0].poster} alt={genres[0].title}/>
             <h4>{genres[0].description}</h4>

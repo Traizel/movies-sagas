@@ -48,9 +48,7 @@ function* postMovie(action) {
     // get all movies from the DB
     try {
         yield axios.post('/api/movie', {movie: action.payload});
-        console.log('get all:', movies.data);
-        yield put({ type: 'SET_MOVIES', payload: movies.data });
-
+        yield fetchAllMovies();
     } catch {
         console.log('get all error');
     }
