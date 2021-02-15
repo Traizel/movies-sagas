@@ -3,7 +3,6 @@
 
 -- 1. Select all movies with the 'Adventure' genre? Use the id.
 
-INSERT your SQL here :)
 
 -- 2. Get the count of movies that have each genre.  
 --  Make sure you get back all the genres!
