@@ -12,7 +12,7 @@ router.get('/:id', (req, res) => {
   WHERE movie_id=$1`;
   pool.query(sqlText, [idToGet])
   .then( (result) => {
-    console.log(`Movie with id ${idToGet}`, result.rows);
+    console.log(`Genre with id ${idToGet}`, result.rows);
     res.send(result.rows);
   })
   .catch( (error) => {
