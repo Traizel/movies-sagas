@@ -2,7 +2,10 @@
 -- Add the SQL that does what is asked in each question.
 
 -- 1. Select all movies with the 'Adventure' genre? Use the id.
-
+SELECT * from movies_genres
+JOIN genres ON movies_genres.genre_id = genres.id
+JOIN movies ON movies_genres.movie_id = movies.id
+WHERE genre_id=1;
 
 -- 2. Get the count of movies that have each genre.  
 --  Make sure you get back all the genres!
