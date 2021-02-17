@@ -39,12 +39,14 @@ function AddMovie() {
         setNewTitle('');
         setNewURL('');
         setNewDesc('');
+        history.push('/');
     };
 
     return (
         <div>
             <h1>Add a Movie:</h1>
             <form onSubmit={handleSubmit}>
+                <div className="inputs">
                 <input
                     type="text"
                     placeholder="Movie Title"
@@ -65,20 +67,21 @@ function AddMovie() {
                         Dropdown button
                     </button>
                     <div className="dropdown-menu">
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(1) }}>Adventure</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(2) }}>Animated</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(3) }}>Biographical</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(4) }}>Comedy</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(5) }}>Disaster</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(6) }}>Drama</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(7) }}>Epic</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(8) }}>Fantasy</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(9) }}>Musical</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(10) }}>Romantic</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(11) }}>Science Fiction</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(12) }}>Space-Opera</a>
-                        <a className="dropdown-item" href="#" onClick={() => { setNewGenre(13) }}>Superhero</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(1) }}>Adventure</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(2) }}>Animated</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(3) }}>Biographical</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(4) }}>Comedy</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(5) }}>Disaster</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(6) }}>Drama</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(7) }}>Epic</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(8) }}>Fantasy</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(9) }}>Musical</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(10) }}>Romantic</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(11) }}>Science Fiction</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(12) }}>Space-Opera</a>
+                        <a className="dropdown-item" onClick={() => { setNewGenre(13) }}>Superhero</a>
                     </div>
+                </div>
                 </div>
                 <button type="submit">Add!</button>
             </form>
