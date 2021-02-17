@@ -8,10 +8,10 @@ GROUP BY name;
 
 -- 2. Get the count of movies that have each genre.  
 --  Make sure you get back all the genres!
-SELECT name AS genre_name FROM genres
-JOIN movies_genres
-COUNT("movie_id")
-ON genres.id = movies_genres.genre_id;
+SELECT "name" AS genre_name, COUNT("movie_id") AS movie_count FROM genres
+JOIN movies_genres ON genres.id = movies_genres.genre_id
+GROUP BY name;
+
 
 Example Result:
 ---------------------------------
